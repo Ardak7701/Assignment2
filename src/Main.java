@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
 
@@ -36,6 +37,20 @@ public class Main {
 
     keeper.feedAnimal(lion1);
     keeper.cleanCage(elephant);
+    System.out.println("\nSearch animal by name (from console):");
+
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter animal name: ");
+String inputName = scanner.nextLine();
+
+Animal foundAnimal = zoo.findByName(inputName);
+
+if (foundAnimal != null) {
+    System.out.println("Found: " + foundAnimal);
+} else {
+    System.out.println("Animal not found");
+}
+
   }
 }
 
