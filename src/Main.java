@@ -50,7 +50,13 @@ public class Main {
     } else {
       System.out.println("Animal not found");
     }
+    AnimalDAO dao = new AnimalDAO();
+
+    dao.addAnimal(new Lion("Alex", 7, 30.0));
+    dao.getAllAnimals();
+    dao.updateAnimal(1, 6);
+    dao.deleteAnimal(2);
+
 
   }
 }
-
